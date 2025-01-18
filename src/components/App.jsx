@@ -1,12 +1,25 @@
 import Footer from "./Footer";
 import MusicPlayer from "./MusicPlayer";
+import CoverArt from "./CoverArt";
+import SongTitle from "./SongTitle";
 
 function App() {
   return (
-    <div className="h-full flex flex-col justify-between p-8 min-h-screen">
-      <MusicPlayer />
-      <Footer />
-    </div>
+    <div className="flex w-full h-screen">
+      <div className="flex flex-grow md:flex-row w-full">
+        {/* Left Column */}
+        <div className="flex flex-col w-1/2 items-center md:items-start p-4">
+          <CoverArt />
+          <SongTitle title="Blackwater Park" artist="Opeth" />
+          <MusicPlayer />
+        </div>
+        {/* Right Column */}
+        <div className="flex flex-col w-1/2 border-l border-gray-300 px-4 mt-4 items-start">
+          <h2 className="text-lg font-bold mt-4">Playlist</h2>
+          {/* Add playlist items */}
+          </div>
+        </div>
+  </div>
   );
 }
 
