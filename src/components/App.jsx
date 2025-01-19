@@ -1,24 +1,19 @@
 import React from 'react';
+import MusicPlayer from './MusicPlayer';
+import Footer from './Footer';
 import CurrentlyPlaying from "./CurrentlyPlaying";
 import Playlist from "./Playlist";
 
+
 function App() {
   return (
-    <div className="flex flex-col md:flex-row w-full h-screen">
-        {/* Left Column */}
-        <div className="w-full md:w-1/2 h-full flex flex-col">
-          <div className="flex-grow">
-            <CurrentlyPlaying />
-          </div>
-        </div>
-        {/* Right Column */}
-        <div className="w-full md:w-1/2 h-full flex flex-col">
-          <div className="flex-grow border-l border-gray-300 h-full">
-            <Playlist />
-          </div>
-        </div>
+    <div className="flex flex-col w-full h-screen">
+      <div className="flex-grow flex flex-col">
+        <MusicPlayer />
+      </div>      
+        <Footer />
     </div>
   );
-}
+};
 
 export default App;

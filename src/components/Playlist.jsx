@@ -15,7 +15,7 @@ const Playlist = () => {
 
     return (
         <div className="w-full">
-            <h2 className="text-lg font-bold pt-6 ml-6">Playlist</h2>
+            <h2 className="text-2xl font-bold pt-6 ml-6 pb-2">Playlist</h2>
             <div className="flex flex-col space-y-2 ml-6">
                 {songs.map((song, index) => (
                     <PlayListItem
