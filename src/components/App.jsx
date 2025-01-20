@@ -10,8 +10,10 @@ function App() {
     <div className="flex flex-col w-full h-screen">
       <div className="flex-grow flex flex-col">
         <MusicPlayer />
-      </div>      
+      </div>   
+      <div className="bg-[#ffd480] dark:bg-chartreuse-300 dark:text-rose-50">   
         <Footer />
+      </div>
     </div>
   );
 };

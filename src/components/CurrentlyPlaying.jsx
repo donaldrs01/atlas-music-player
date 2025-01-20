@@ -5,7 +5,7 @@ import MusicControls from './MusicControls';
 
 const CurrentlyPlaying = () => {
     return (
-        <div className="flex flex-col items-center md:items-start p-4 w-full h-full bg-azure-100 shadow-lg">
+        <div className="flex flex-col items-center md:items-start p-4 w-full h-full bg-azure-100 dark:bg-rose-300 dark:text-rose-50 shadow-lg">
             <CoverArt />
             <div className="w-full h-full">
                 <SongTitle title="Blackwater Park" artist="Opeth" />

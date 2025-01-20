@@ -14,7 +14,7 @@ const MusicPlayer = () => {
         </div>
         {/* Right Column - Playlist */}
         <div className="w-full md:w-1/2 h-full flex flex-col">
-          <div className="flex-grow border-l border-azure-200 bg-chartreuse-100 h-full shadow-lg">
+          <div className="flex-grow border-l border-azure-200 bg-chartreuse-100 dark:bg-chartreuse-300 dark:text-chartreuse-50 h-full shadow-lg">
             <Playlist />
           </div>
         </div>
