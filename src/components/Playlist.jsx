@@ -14,9 +14,9 @@ const Playlist = () => {
     ];
 
     return (
-        <div className="w-full">
-            <h2 className="text-2xl font-bold pt-6 ml-6 pb-2">Playlist</h2>
-            <div className="flex flex-col space-y-2 ml-6">
+        <div className="w-full shadow-md">
+            <h2 className=" text-rose-200 text-2xl font-extrabold pt-6 ml-6 pb-2 border-b border-azure-200">Playlist</h2>
+            <div className="flex flex-col space-y-2 md:ml-4">
                 {songs.map((song, index) => (
                     <PlayListItem
                         key={index}

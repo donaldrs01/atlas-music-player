@@ -6,7 +6,7 @@ const SongTitle = ({ title, artist }) => {
             {/* Song Title */}
             <h1 className="text-4xl font-bold">{title}</h1>
             {/* Artist */}
-            <p className="text-2xl text-gray-500 py-2">{artist}</p>
+            <p className="text-2xl py-2">{artist}</p>
         </div>
     );
 };
