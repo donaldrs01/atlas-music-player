@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import CurrentlyPlaying from "./CurrentlyPlaying";
 import Playlist from "./Playlist";
 import AudioPlayer from "./AudioPlayer";
+import ThemeToggle from "./ThemeToggle";
 import LoadingSkeleton from "./Loading Skeleton";
 
 type SongData = {
@@ -104,9 +105,12 @@ const MusicPlayer: React.FC = () => {
   const currentSong = playlist[currentIndex];
 
   return (
-    <div className="flex h-full w-full">
+    <div className="flex h-screen w-screen flex-col md:flex-row">
       {/* Left Side: Currently Playing */}
-      <div className="flex h-full w-1/2 flex-col bg-rose-300 p-6">
+      <div className="bg-light-panel dark:bg-dark-panel flex w-full flex-col p-2 md:w-1/2">
+        <div className="flex justify-start p-0">
+          <ThemeToggle />
+        </div>
         {currentSong && (
           <CurrentlyPlaying
             title={currentSong.title}
@@ -127,7 +131,7 @@ const MusicPlayer: React.FC = () => {
         )}
       </div>
       {/* Right Side: Playlist */}
-      <div className="h-full w-1/2 overflow-y-auto bg-chartreuse-300 p-4">
+      <div className="bg-light-playlist dark:bg-dark-playlist mb-11 w-full flex-1 overflow-y-auto p-0 md:mb-0 md:w-1/2">
         <Playlist
           songs={playlist}
           currentIndex={currentIndex}
@@ -149,32 +153,3 @@ const MusicPlayer: React.FC = () => {
 };
 
 export default MusicPlayer;
-
-/*
-type MusicPlayerProps = {
-  playlist: SongData[];
-  currentIndex: number;
-  onPrevious: () => void;
-  onNext: () => void;
-  onShuffle: (shuffleState: boolean) => void;
-  isFirstSong: boolean;
-  isLastSong: boolean;
-  volume: number;
-  onVolumeChange: (newVolume: number) => void;
-  onSelect: (index:number) => void;
-};
-
-const MusicPlayer: React.FC<MusicPlayerProps> = ({
-  playlist,
-  currentIndex,
-  onPrevious,
-  onNext,
-  onShuffle,
-  isFirstSong,
-  isLastSong,
-  volume,
-  onVolumeChange,
-  onSelect,
-}) => {
-  const currentSong= playlist[currentIndex];
-*/

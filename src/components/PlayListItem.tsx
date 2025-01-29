@@ -24,25 +24,28 @@ const PlayListItem: React.FC<PlayListItemProps> = ({
   return (
     <div
       onClick={onClick}
-      className={`group flex w-full cursor-pointer items-center justify-between p-2 ${isPlaying ? "bg-rose-500 font-bold text-white" : "bg-chartreuse-50 hover:bg-rose-200"} `}
+      className={`group flex w-full cursor-pointer items-center justify-between p-2 ${isPlaying ? "bg-light-now-playing dark:bg-dark-now-playing font-bold text-white" : "hover:bg-light-hover dark:hover:bg-dark-hover bg-light-listItem dark:bg-dark-bg"}`}
     >
       <div className="flex flex-col">
         <p
-          className={`text-lg ${isPlaying ? "text-white" : "text-rose-300"} group-hover:text-rose-50`}
+          className={`text-lg ${isPlaying ? "text-light-primary dark:text-dark-primary" : "text-light-primary dark:text-dark-primary"} group-hover:text-light-primary dark:group-hover:text-dark-primary`}
         >
-          {title}
+          {" "}
+          {title}{" "}
         </p>
         <p
-          className={`text-sm ${isPlaying ? "text-white" : "text-rose-200"} group-hover:text-rose-50`}
+          className={`text-sm ${isPlaying ? "text-light-primary dark:text-dark-primary" : "text-light-primary dark:text-dark-primary"} group-hover:text-light-primary dark:group-hover:text-dark-primary`}
         >
-          {artist}
+          {" "}
+          {artist}{" "}
         </p>
       </div>
-      <div className="pr-6">
+      <div className="text-light-accent dark:text-dark-accent group-hover:text-light-primary dark:group-hover:text-dark-primary pr-6">
         <p
-          className={`text-sm ${isPlaying ? "text-white" : "text-rose-200"} group-hover:text-rose-50`}
+          className={`text-sm ${isPlaying ? "text-light-primary dark:text-dark-primary" : "text-light-primary dark:text-dark-primary"} group-hover:text-light-primary dark:group-hover:text-dark-primary`}
         >
-          {formatTime(length)}
+          {" "}
+          {formatTime(length)}{" "}
         </p>
       </div>
     </div>

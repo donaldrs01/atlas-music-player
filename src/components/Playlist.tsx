@@ -21,8 +21,10 @@ const Playlist: React.FC<PlayListProps> = ({
   currentIndex,
 }) => {
   return (
-    <div className="h-full w-full flex-grow bg-chartreuse-200 shadow-md">
-      <h2 className="border-b px-2 py-2 text-2xl font-extrabold">Playlist</h2>
+    <div className="bg-light-playlist dark:bg-dark-playlist h-full w-full flex-grow pb-10 shadow-md">
+      <h2 className="text-light-primary dark:text-dark-primary border-b px-2 py-2 text-2xl font-extrabold">
+        Playlist
+      </h2>
       <div className="flex flex-col gap-y-1">
         {songs.map((song, index) => (
           <PlayListItem

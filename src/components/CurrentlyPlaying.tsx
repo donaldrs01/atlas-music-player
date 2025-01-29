@@ -37,14 +37,14 @@ const CurrentlyPlaying: React.FC<CurrentlyPlayingProps> = ({
   onSpeedChange,
 }) => {
   return (
-    <div className="flex h-full w-full flex-col items-center p-4 shadow-lg md:items-start dark:bg-rose-300 dark:text-rose-50">
-      <div className="flex h-[60%] w-full items-center justify-center">
+    <div className="bg-light-panel dark:bg-dark-panel flex h-[65vh] w-full flex-col items-center p-4 md:items-start">
+      <div className="flex w-full justify-center md:h-[70vh]">
         <CoverArt coverUrl={coverUrl} />
       </div>
-      <div className="mt-12 w-full">
+      <div className="h-[15%] w-full md:mb-12">
         <SongTitle title={title} artist={artist} />
       </div>
-      <div className="mt-auto w-full">
+      <div className="mt-auto flex h-[25%] w-full flex-col items-center justify-center md:mb-6">
         <MusicControls
           onPrevious={onPrevious}
           onNext={onNext}
