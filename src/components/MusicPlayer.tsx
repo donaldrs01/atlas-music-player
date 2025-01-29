@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CurrentlyPlaying from "./CurrentlyPlaying";
 import Playlist from "./Playlist";
+import AudioPlayer from "./AudioPlayer";
 import LoadingSkeleton from "./Loading Skeleton";
 
 type SongData = {
@@ -9,6 +10,7 @@ type SongData = {
   artist: string;
   cover: string;
   duration: number;
+  song: string;
 };
 
 const MusicPlayer: React.FC = () => {
@@ -18,6 +20,8 @@ const MusicPlayer: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
   const [volume, setVolume] = useState<number>(50); // Default volume set to 50
+  const [playbackRate, setPlaybackRate] = useState<number>(1);
+  const [isPlaying, setIsPlaying] = useState<boolean>(false);
 
   // Fetch playlist data
   useEffect(() => {
@@ -44,6 +48,10 @@ const MusicPlayer: React.FC = () => {
 
   // Navigation functions
 
+  const togglePlayPause = () => {
+    setIsPlaying((prev) => !prev);
+  };
+
   const nextSong = () => {
     // Resets playlist index to 0 when reaches end of array
     setCurrentIndex((prevIndex) => (prevIndex + 1) % playlist.length);
@@ -55,7 +63,6 @@ const MusicPlayer: React.FC = () => {
   };
 
   // Receives shuffleState from PlayControls
-
   const toggleShuffle = (shuffleState: boolean) => {
     if (shuffleState) {
       const shuffledPlaylist = [...playlist].sort(() => Math.random() - 0.5);
@@ -75,6 +82,10 @@ const MusicPlayer: React.FC = () => {
   // Volume control
   const handleVolumeChange = (newVolume: number) => {
     setVolume(newVolume);
+  };
+
+  const handlePlaybackRateChange = (rate: number) => {
+    setPlaybackRate(rate);
   };
 
   // Update current song when playlist item is clicked
@@ -108,6 +119,10 @@ const MusicPlayer: React.FC = () => {
             isLastSong={currentIndex === playlist.length - 1}
             volume={volume}
             onVolumeChange={handleVolumeChange}
+            isPlaying={isPlaying}
+            onTogglePlay={togglePlayPause}
+            playbackSpeed={playbackRate}
+            onSpeedChange={handlePlaybackRateChange}
           />
         )}
       </div>
@@ -119,6 +134,16 @@ const MusicPlayer: React.FC = () => {
           onSelect={handleSelectSong}
         />
       </div>
+      {/* Audio Component */}
+      {currentSong && (
+        <AudioPlayer
+          src={currentSong.song}
+          isPlaying={isPlaying}
+          volume={volume}
+          playSpeed={playbackRate}
+          onMusicFinish={nextSong}
+        />
+      )}
     </div>
   );
 };

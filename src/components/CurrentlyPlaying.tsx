@@ -14,6 +14,10 @@ type CurrentlyPlayingProps = {
   isLastSong: boolean;
   volume: number;
   onVolumeChange: (newVolume: number) => void;
+  isPlaying: boolean;
+  onTogglePlay: () => void;
+  playbackSpeed: number;
+  onSpeedChange: (speed: number) => void;
 };
 
 const CurrentlyPlaying: React.FC<CurrentlyPlayingProps> = ({
@@ -27,6 +31,10 @@ const CurrentlyPlaying: React.FC<CurrentlyPlayingProps> = ({
   isLastSong,
   volume,
   onVolumeChange,
+  isPlaying,
+  onTogglePlay,
+  playbackSpeed,
+  onSpeedChange,
 }) => {
   return (
     <div className="flex h-full w-full flex-col items-center p-4 shadow-lg md:items-start dark:bg-rose-300 dark:text-rose-50">
@@ -45,6 +53,10 @@ const CurrentlyPlaying: React.FC<CurrentlyPlayingProps> = ({
           isLastSong={isLastSong}
           volume={volume}
           onVolumeChange={onVolumeChange}
+          isPlaying={isPlaying}
+          onTogglePlay={onTogglePlay}
+          playbackSpeed={playbackSpeed}
+          onSpeedChange={onSpeedChange}
         />
       </div>
     </div>

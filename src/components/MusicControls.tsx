@@ -10,6 +10,10 @@ type MusicControlsProps = {
   isLastSong: boolean;
   volume: number;
   onVolumeChange: (newVolume: number) => void;
+  isPlaying: boolean;
+  onTogglePlay: () => void;
+  playbackSpeed: number;
+  onSpeedChange: (speed: number) => void;
 };
 
 const MusicControls: React.FC<MusicControlsProps> = ({
@@ -20,6 +24,10 @@ const MusicControls: React.FC<MusicControlsProps> = ({
   isLastSong,
   volume,
   onVolumeChange,
+  isPlaying,
+  onTogglePlay,
+  playbackSpeed,
+  onSpeedChange,
 }) => {
   return (
     <div className="flex w-full flex-col items-center space-y-4">
@@ -29,6 +37,10 @@ const MusicControls: React.FC<MusicControlsProps> = ({
         onShuffle={onShuffle}
         isFirstSong={isFirstSong}
         isLastSong={isLastSong}
+        isPlaying={isPlaying}
+        onTogglePlay={onTogglePlay}
+        playbackSpeed={playbackSpeed}
+        onSpeedChange={onSpeedChange}
       />
       <VolumeControls volume={volume} onVolumeChange={onVolumeChange} />
     </div>

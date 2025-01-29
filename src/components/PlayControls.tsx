@@ -11,6 +11,10 @@ type PlayControlProps = {
   onShuffle: (shuffleState: boolean) => void;
   isFirstSong: boolean;
   isLastSong: boolean;
+  isPlaying: boolean;
+  onTogglePlay: () => void;
+  playbackSpeed: number;
+  onSpeedChange: (speed: number) => void;
 };
 
 const PlayControls: React.FC<PlayControlProps> = ({
@@ -19,15 +23,12 @@ const PlayControls: React.FC<PlayControlProps> = ({
   onShuffle,
   isFirstSong,
   isLastSong,
+  isPlaying,
+  onTogglePlay,
+  playbackSpeed,
+  onSpeedChange,
 }) => {
-  const [isPlaying, setIsPlaying] = useState(false);
   const [isShuffled, setIsShuffled] = useState(false);
-  const [playbackSpeed, setPlaybackSpeed] = useState(1);
-
-  const togglePause = () => {
-    // Switch value of isPlaying
-    setIsPlaying(!isPlaying);
-  };
 
   const toggleShuffle = () => {
     setIsShuffled((prevShuffle) => {
@@ -38,11 +39,9 @@ const PlayControls: React.FC<PlayControlProps> = ({
   };
 
   const cycleSpeed = () => {
-    setPlaybackSpeed((prevSpeed) => {
-      // Switch between three speed values (reverts to 0.5 if current speed is set to 2.0 )
-      const newSpeed = prevSpeed === 0.5 ? 1 : prevSpeed === 1 ? 2 : 0.5;
-      return newSpeed;
-    });
+    // Switch between three speed values (reverts to 0.5 if current speed is set to 2.0 )
+    const newSpeed = playbackSpeed === 0.5 ? 1 : playbackSpeed === 1 ? 2 : 0.5;
+    onSpeedChange(newSpeed);
   };
 
   return (
@@ -64,7 +63,7 @@ const PlayControls: React.FC<PlayControlProps> = ({
       </button>
       {/* Play/Pause Button */}
       <button
-        onClick={togglePause}
+        onClick={onTogglePlay} // Call music player's play/pause
         className="flex items-center justify-center"
       >
         <img src={isPlaying ? pause : play} className="h-6 w-6" />
@@ -93,8 +92,7 @@ const PlayControls: React.FC<PlayControlProps> = ({
 
 export default PlayControls;
 
-{
-  /*
+/*
 const PlayControls = () => {
     return (
         <div className="flex w-full items-center justify-between">
@@ -120,4 +118,3 @@ const PlayControls = () => {
 export default PlayControls;
 
 */
-}
