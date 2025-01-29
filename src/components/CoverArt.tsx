@@ -1,50 +1,19 @@
-{/*
-import React from 'react';
-import placeholder from "../assets/album_art.jpg"
-
-const CoverArt = () => {
-    return (
-        <div className="w-full max-h-[70%] bg-gray-200 flex items-center justify-center aspect-square mb-4">
-            <img
-                src={placeholder}
-                className="w-full h-full object-cover"
-            />
-        </div>
-    );
+import React from "react";
+// Type define prop for CoverArt (songID to fetch art)
+type CoverArtProps = {
+  coverUrl: string;
 };
 
-export default CoverArt;
-*/}
-import React from 'react';
-
-{/*
-// Type define different song parameters
-interface SongData {
-    id: string;
-    title: string;
-    artist: string;
-    genre: string;
-    duration: number;
-    cover: string;
-    song: string;
-}
-    */}
-
-// Type define prop for CoverArt (songID to fetch art)
-interface CoverArtProps {
-    coverUrl: string;
-}
-
 const CoverArt: React.FC<CoverArtProps> = ({ coverUrl }) => {
-    return (
-        <div className="w-full max-h-[70%] bg-gray-200 flex items-center justify-center aspect-square mb-4">
-            <img
-                src={coverUrl || '/assets/placeholder.svg'}
-                alt="Album Cover"
-                className="w-full h-full object-cover"
-            />
-        </div>
-    );
+  return (
+    <div className="flex w-full justify-center">
+      <img
+        src={coverUrl || "/assets/placeholder.svg"}
+        alt="Album Cover"
+        className="max-h-full w-[90%] object-cover"
+      />
+    </div>
+  );
 };
 
 export default CoverArt;

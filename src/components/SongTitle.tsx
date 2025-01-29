@@ -1,34 +1,19 @@
-import React from 'react';
+import React from "react";
 
-{/*
-
-const SongTitle = ({ title, artist }) => {
-    return (
-        <div className='text-left mt-4 w-full h-full mb-6'>
-           
-            <h1 className="text-4xl font-bold">{title}</h1>
-           
-            <p className="text-2xl py-2">{artist}</p>
-        </div>
-    );
+type SongTitleProps = {
+  title: string;
+  artist: string;
 };
-*/}
-
-// Define prop types for SongTitle
-interface SongTitleProps {
-    title: string;
-    artist: string;
-}
 
 const SongTitle: React.FC<SongTitleProps> = ({ title, artist }) => {
-    return (
-        <div className="text-left mt-4 w-full h-full mb-6">
-            {/* Song Title */}
-            <h1 className="text-4xl font-bold">{title}</h1>
-            {/* Artist */}
-            <p className="text-2xl py-2">{artist}</p>
-        </div>
-    );
+  return (
+    <div className="mt-6 w-full text-left">
+      {/* Song Title */}
+      <h1 className="text-4xl font-bold">{title}</h1>
+      {/* Artist */}
+      <p className="py-2 text-2xl">{artist}</p>
+    </div>
+  );
 };
 
 export default SongTitle;
