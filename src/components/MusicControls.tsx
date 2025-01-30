@@ -30,7 +30,7 @@ const MusicControls: React.FC<MusicControlsProps> = ({
   onSpeedChange,
 }) => {
   return (
-    <div className="flex w-full flex-col items-center space-y-4 md:mb-8">
+    <div className="mb-6 flex w-full flex-col items-center md:mt-12">
       <PlayControls
         onPrevious={onPrevious}
         onNext={onNext}

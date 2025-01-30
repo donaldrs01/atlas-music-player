@@ -10,7 +10,7 @@ const CoverArt: React.FC<CoverArtProps> = ({ coverUrl }) => {
       <img
         src={coverUrl || "/assets/placeholder.svg"}
         alt="Album Cover"
-        className="w-full max-w-[95%] object-cover md:h-[55vh] md:max-w-[95%]"
+        className="h-[30vh] w-full max-w-[95%] object-cover md:h-[55vh]"
       />
     </div>
   );

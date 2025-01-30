@@ -45,7 +45,7 @@ const PlayControls: React.FC<PlayControlProps> = ({
   };
 
   return (
-    <div className="mt-6 flex w-full items-center justify-between">
+    <div className="flex w-full items-center justify-between">
       {/* Speed Button */}
       <button
         onClick={cycleSpeed}

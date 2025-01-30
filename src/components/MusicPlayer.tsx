@@ -107,7 +107,7 @@ const MusicPlayer: React.FC = () => {
   return (
     <div className="flex h-screen w-screen flex-col md:flex-row">
       {/* Left Side: Currently Playing */}
-      <div className="bg-light-panel dark:bg-dark-panel flex w-full flex-col p-2 md:w-1/2">
+      <div className="flex w-full flex-col bg-light-panel p-2 dark:bg-dark-panel md:w-1/2">
         <div className="flex justify-start p-0">
           <ThemeToggle />
         </div>
@@ -131,7 +131,7 @@ const MusicPlayer: React.FC = () => {
         )}
       </div>
       {/* Right Side: Playlist */}
-      <div className="bg-light-playlist dark:bg-dark-playlist mb-11 w-full flex-1 overflow-y-auto p-0 md:mb-0 md:w-1/2">
+      <div className="mb-6 w-full flex-1 overflow-y-auto bg-light-playlist p-0 dark:bg-dark-playlist md:mb-0 md:w-1/2">
         <Playlist
           songs={playlist}
           currentIndex={currentIndex}

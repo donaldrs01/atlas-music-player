@@ -7,13 +7,13 @@ type SongTitleProps = {
 
 const SongTitle: React.FC<SongTitleProps> = ({ title, artist }) => {
   return (
-    <div className="mt-6 w-full text-left">
+    <div className="w-full text-left">
       {/* Song Title */}
-      <h1 className="text-light-highlight dark:text-dark-highlight text-4xl font-bold">
+      <h1 className="ml-4 mt-4 text-2xl font-bold text-light-highlight dark:text-dark-highlight md:text-4xl">
         {title}
       </h1>
       {/* Artist */}
-      <p className="text-light-highlight dark:text-dark-highlight py-2 text-2xl">
+      <p className="ml-4 text-xl text-light-highlight dark:text-dark-highlight md:py-2 md:text-2xl">
         {artist}
       </p>
     </div>
