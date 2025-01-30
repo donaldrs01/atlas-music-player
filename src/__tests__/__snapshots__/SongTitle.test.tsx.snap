@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`SongTitle Snapshot Tests > renders a longer song title and artist 1`] = `
-<DocumentFragment>
+<div>
   <div
     class="w-full text-left"
   >
@@ -16,11 +16,11 @@ exports[`SongTitle Snapshot Tests > renders a longer song title and artist 1`] =
       NotKansas
     </p>
   </div>
-</DocumentFragment>
+</div>
 `;
 
 exports[`SongTitle Snapshot Tests > renders a song title and artist 1`] = `
-<DocumentFragment>
+<div>
   <div
     class="w-full text-left"
   >
@@ -35,5 +35,5 @@ exports[`SongTitle Snapshot Tests > renders a song title and artist 1`] = `
       Tool
     </p>
   </div>
-</DocumentFragment>
+</div>
 `;

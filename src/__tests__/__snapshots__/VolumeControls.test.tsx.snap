@@ -1,0 +1,53 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`VolumeControl Tests > volume bar renders correctly with muted volume (0) 1`] = `
+<div>
+  <div
+    class="flex w-full flex-col space-y-3"
+  >
+    <div
+      class="flex items-center space-x-3"
+    >
+      <img
+        alt="Volume"
+        class="h-6 w-6"
+        src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='currentColor'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%20class='lucide%20lucide-volume-2'%3e%3cpath%20d='M11%204.702a.705.705%200%200%200-1.203-.498L6.413%207.587A1.4%201.4%200%200%201%205.416%208H3a1%201%200%200%200-1%201v6a1%201%200%200%200%201%201h2.416a1.4%201.4%200%200%201%20.997.413l3.383%203.384A.705.705%200%200%200%2011%2019.298z'/%3e%3cpath%20d='M16%209a5%205%200%200%201%200%206'/%3e%3cpath%20d='M19.364%2018.364a9%209%200%200%200%200-12.728'/%3e%3c/svg%3e"
+      />
+      <input
+        class="h-2 w-full cursor-pointer rounded-lg bg-gray-200"
+        max="100"
+        min="0"
+        style="accent-color: gray;"
+        type="range"
+        value="0"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`VolumeControl Tests > volume bar renders with default value 1`] = `
+<div>
+  <div
+    class="flex w-full flex-col space-y-3"
+  >
+    <div
+      class="flex items-center space-x-3"
+    >
+      <img
+        alt="Volume"
+        class="h-6 w-6"
+        src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='currentColor'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%20class='lucide%20lucide-volume-2'%3e%3cpath%20d='M11%204.702a.705.705%200%200%200-1.203-.498L6.413%207.587A1.4%201.4%200%200%201%205.416%208H3a1%201%200%200%200-1%201v6a1%201%200%200%200%201%201h2.416a1.4%201.4%200%200%201%20.997.413l3.383%203.384A.705.705%200%200%200%2011%2019.298z'/%3e%3cpath%20d='M16%209a5%205%200%200%201%200%206'/%3e%3cpath%20d='M19.364%2018.364a9%209%200%200%200%200-12.728'/%3e%3c/svg%3e"
+      />
+      <input
+        class="h-2 w-full cursor-pointer rounded-lg bg-gray-200"
+        max="100"
+        min="0"
+        style="accent-color: gray;"
+        type="range"
+        value="50"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -4,17 +4,17 @@ import { describe, test, expect } from "vitest";
 
 describe("SongTitle Snapshot Tests", () => {
   test("renders a song title and artist", () => {
-    const { asFragment } = render(<SongTitle title="Schism" artist="Tool" />);
-    expect(asFragment()).toMatchSnapshot();
+    const { container } = render(<SongTitle title="Schism" artist="Tool" />);
+    expect(container).toMatchSnapshot();
   });
 
   test("renders a longer song title and artist", () => {
-    const { asFragment } = render(
+    const { container } = render(
       <SongTitle
         title="Carry on My Wayward Wayward Wayward Son"
         artist="NotKansas"
       />,
     );
-    expect(asFragment()).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

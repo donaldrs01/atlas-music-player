@@ -6,7 +6,7 @@ describe("PlayListItem Snapshot Tests", () => {
   const mockOnClick = vi.fn();
 
   test("correctly displays title, artist and length of current track", () => {
-    const { asFragment } = render(
+    const { container } = render(
       <PlayListItem
         title="Trains"
         artist="Porcupine Tree"
@@ -15,11 +15,11 @@ describe("PlayListItem Snapshot Tests", () => {
         onClick={mockOnClick}
       />,
     );
-    expect(asFragment()).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test("displays correct song information for another song", () => {
-    const { asFragment } = render(
+    const { container } = render(
       <PlayListItem
         title="Goliath"
         artist="Karnivool"
@@ -28,11 +28,11 @@ describe("PlayListItem Snapshot Tests", () => {
         onClick={mockOnClick}
       />,
     );
-    expect(asFragment()).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test("displays a song with no artist provided", () => {
-    const { asFragment } = render(
+    const { container } = render(
       <PlayListItem
         title="Blue Sky"
         length={200}
@@ -40,11 +40,11 @@ describe("PlayListItem Snapshot Tests", () => {
         onClick={mockOnClick}
       />,
     );
-    expect(asFragment()).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 
   test("displays a song with no length provided", () => {
-    const { asFragment } = render(
+    const { container } = render(
       <PlayListItem
         title="Comfortably Numb"
         artist="Pink Floyd"
@@ -52,6 +52,6 @@ describe("PlayListItem Snapshot Tests", () => {
         onClick={mockOnClick}
       />,
     );
-    expect(asFragment()).toMatchSnapshot();
+    expect(container).toMatchSnapshot();
   });
 });

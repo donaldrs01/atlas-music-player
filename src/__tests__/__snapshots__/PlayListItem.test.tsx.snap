@@ -1,7 +1,7 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
 exports[`PlayListItem Snapshot Tests > correctly displays title, artist and length of current track 1`] = `
-<DocumentFragment>
+<div>
   <div
     class="group flex w-full cursor-pointer items-center justify-between p-2 bg-light-listItem hover:bg-light-hover dark:bg-dark-bg dark:hover:bg-dark-hover"
   >
@@ -11,12 +11,16 @@ exports[`PlayListItem Snapshot Tests > correctly displays title, artist and leng
       <p
         class="text-lg text-light-primary dark:text-dark-primary group-hover:text-light-primary dark:group-hover:text-dark-primary"
       >
-         Trains 
+         
+        Trains
+         
       </p>
       <p
         class="text-sm text-light-primary dark:text-dark-primary group-hover:text-light-primary dark:group-hover:text-dark-primary"
       >
-         Porcupine Tree 
+         
+        Porcupine Tree
+         
       </p>
     </div>
     <div
@@ -25,15 +29,17 @@ exports[`PlayListItem Snapshot Tests > correctly displays title, artist and leng
       <p
         class="text-sm text-light-primary dark:text-dark-primary group-hover:text-light-primary dark:group-hover:text-dark-primary"
       >
-         4:17 
+         
+        4:17
+         
       </p>
     </div>
   </div>
-</DocumentFragment>
+</div>
 `;
 
 exports[`PlayListItem Snapshot Tests > displays a song with no artist provided 1`] = `
-<DocumentFragment>
+<div>
   <div
     class="group flex w-full cursor-pointer items-center justify-between p-2 bg-light-listItem hover:bg-light-hover dark:bg-dark-bg dark:hover:bg-dark-hover"
   >
@@ -43,12 +49,15 @@ exports[`PlayListItem Snapshot Tests > displays a song with no artist provided 1
       <p
         class="text-lg text-light-primary dark:text-dark-primary group-hover:text-light-primary dark:group-hover:text-dark-primary"
       >
-         Blue Sky 
+         
+        Blue Sky
+         
       </p>
       <p
         class="text-sm text-light-primary dark:text-dark-primary group-hover:text-light-primary dark:group-hover:text-dark-primary"
       >
-          
+         
+         
       </p>
     </div>
     <div
@@ -57,15 +66,17 @@ exports[`PlayListItem Snapshot Tests > displays a song with no artist provided 1
       <p
         class="text-sm text-light-primary dark:text-dark-primary group-hover:text-light-primary dark:group-hover:text-dark-primary"
       >
-         3:20 
+         
+        3:20
+         
       </p>
     </div>
   </div>
-</DocumentFragment>
+</div>
 `;
 
 exports[`PlayListItem Snapshot Tests > displays a song with no length provided 1`] = `
-<DocumentFragment>
+<div>
   <div
     class="group flex w-full cursor-pointer items-center justify-between p-2 bg-light-now-playing dark:bg-dark-now-playing font-bold text-white"
   >
@@ -75,12 +86,16 @@ exports[`PlayListItem Snapshot Tests > displays a song with no length provided 1
       <p
         class="text-lg text-light-primary dark:text-dark-primary group-hover:text-light-primary dark:group-hover:text-dark-primary"
       >
-         Comfortably Numb 
+         
+        Comfortably Numb
+         
       </p>
       <p
         class="text-sm text-light-primary dark:text-dark-primary group-hover:text-light-primary dark:group-hover:text-dark-primary"
       >
-         Pink Floyd 
+         
+        Pink Floyd
+         
       </p>
     </div>
     <div
@@ -89,15 +104,17 @@ exports[`PlayListItem Snapshot Tests > displays a song with no length provided 1
       <p
         class="text-sm text-light-primary dark:text-dark-primary group-hover:text-light-primary dark:group-hover:text-dark-primary"
       >
-         NaN:NaN 
+         
+        NaN:NaN
+         
       </p>
     </div>
   </div>
-</DocumentFragment>
+</div>
 `;
 
 exports[`PlayListItem Snapshot Tests > displays correct song information for another song 1`] = `
-<DocumentFragment>
+<div>
   <div
     class="group flex w-full cursor-pointer items-center justify-between p-2 bg-light-listItem hover:bg-light-hover dark:bg-dark-bg dark:hover:bg-dark-hover"
   >
@@ -107,12 +124,16 @@ exports[`PlayListItem Snapshot Tests > displays correct song information for ano
       <p
         class="text-lg text-light-primary dark:text-dark-primary group-hover:text-light-primary dark:group-hover:text-dark-primary"
       >
-         Goliath 
+         
+        Goliath
+         
       </p>
       <p
         class="text-sm text-light-primary dark:text-dark-primary group-hover:text-light-primary dark:group-hover:text-dark-primary"
       >
-         Karnivool 
+         
+        Karnivool
+         
       </p>
     </div>
     <div
@@ -121,9 +142,11 @@ exports[`PlayListItem Snapshot Tests > displays correct song information for ano
       <p
         class="text-sm text-light-primary dark:text-dark-primary group-hover:text-light-primary dark:group-hover:text-dark-primary"
       >
-         5:31 
+         
+        5:31
+         
       </p>
     </div>
   </div>
-</DocumentFragment>
+</div>
 `;
